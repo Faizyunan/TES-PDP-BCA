@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pengajuan Kredit - Digital Submission</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+
+        <div class="container header-content">
+
+            <div class="logo">
+                <div class="logo-icon">
+                    BCA
+                </div>
+
+                <div class="logo-text">
+                    <h2>BCA Finance</h2>
+                    <span>Digital Credit Submission</span>
+                </div>
+            </div>
+
+            <div class="user-info">
+                <span>Role</span>
+                <strong>Konsumen</strong>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+    <main>
+
+        <div class="container">
+
+            <!-- PAGE TITLE -->
+            <section class="page-title">
+
+                <div>
+                    <span class="subtitle">
+                        PENGAJUAN KREDIT KENDARAAN
+                    </span>
+
+                    <h1>
+                        Upload Dokumen Pengajuan
+                    </h1>
+
+                    <p>
+                        Silakan lengkapi data dan upload dokumen
+                        yang diperlukan untuk proses pengajuan kredit.
+                    </p>
+                </div>
+
+                <!-- STATUS -->
+                <div class="application-status">
+
+                    <span>Status Pengajuan</span>
+
+                    <strong>
+                        Draft
+                    </strong>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= STEP ================= -->
+            <section class="steps">
+
+                <div class="step active">
+                    <div class="step-number">1</div>
+
+                    <div class="step-content">
+                        <strong>Dokumen</strong>
+                        <span>Upload dokumen</span>
+                    </div>
+                </div>
+
+
+                <div class="step-line"></div>
+
+
+                <div class="step">
+                    <div class="step-number">2</div>
+
+                    <div class="step-content">
+                        <strong>Validasi</strong>
+                        <span>Verifikasi dokumen</span>
+                    </div>
+                </div>
+
+
+                <div class="step-line"></div>
+
+
+                <div class="step">
+                    <div class="step-number">3</div>
+
+                    <div class="step-content">
+                        <strong>Proses</strong>
+                        <span>Diproses Marketing</span>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- ================= FORM ================= -->
+            <form
+                action="upload.php"
+                method="POST"
+                enctype="multipart/form-data"
+                id="applicationForm"
+            >
+
+                <!-- ================= DATA KONSUMEN ================= -->
+                <section class="card">
+
+                    <div class="card-header">
+
+                        <div>
+                            <h2>Data Konsumen</h2>
+
+                            <p>
+                                Masukkan data sesuai dengan dokumen identitas.
+                            </p>
+                        </div>
+
+                        <span class="required">
+                            * Wajib diisi
+                        </span>
+
+                    </div>
+
+
+                    <div class="form-grid">
+
+                        <!-- NAMA -->
+                        <div class="form-group">
+
+                            <label for="nama">
+                                Nama Lengkap
+                                <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="nama"
+                                name="nama"
+                                placeholder="Masukkan nama sesuai KTP"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- NIK -->
+                        <div class="form-group">
+
+                            <label for="nik">
+                                NIK
+                                <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="nik"
+                                name="nik"
+                                placeholder="Masukkan 16 digit NIK"
+                                maxlength="16"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- NOMOR HP -->
+                        <div class="form-group">
+
+                            <label for="no_hp">
+                                Nomor HP
+                                <span>*</span>
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="no_hp"
+                                name="no_hp"
+                                placeholder="08xxxxxxxxxx"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- DEALER -->
+                        <div class="form-group">
+
+                            <label for="dealer">
+                                Dealer
+                                <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="dealer"
+                                name="dealer"
+                                placeholder="Masukkan nama dealer"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ================= DOCUMENT ================= -->
+                <section class="card">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h2>
+                                Dokumen Pengajuan
+                            </h2>
+
+                            <p>
+                                Upload dokumen dalam format PDF, JPG,
+                                JPEG atau PNG dengan maksimal ukuran 5 MB.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="document-list">
+
+
+                        <!-- ================= KTP ================= -->
+                        <div class="document-item">
+
+                            <div class="document-icon">
+                                KTP
+                            </div>
+
+
+                            <div class="document-info">
+
+                                <h3>
+                                    Kartu Tanda Penduduk
+                                </h3>
+
+                                <p>
+                                    Upload KTP konsumen.
+                                </p>
+
+
+                                <label
+                                    for="ktp"
+                                    class="upload-button"
+                                >
+                                    Pilih File
+                                </label>
+
+                                <input
+                                    type="file"
+                                    id="ktp"
+                                    name="ktp"
+                                    accept=".pdf,.jpg,.jpeg,.png"
+                                    hidden
+                                    required
+                                >
+
+                                <span
+                                    class="file-name"
+                                    id="ktp-name"
+                                >
+                                    Belum ada file
+                                </span>
+
+                            </div>
+
+
+                            <div class="document-status pending">
+                                Belum Upload
+                            </div>
+
+                        </div>
+
+
+                        <!-- ================= SPK ================= -->
+                        <div class="document-item">
+
+                            <div class="document-icon">
+                                SPK
+                            </div>
+
+
+                            <div class="document-info">
+
+                                <h3>
+                                    Surat Pemesanan Kendaraan
+                                </h3>
+
+                                <p>
+                                    Upload SPK kendaraan.
+                                </p>
+
+
+                                <label
+                                    for="spk"
+                                    class="upload-button"
+                                >
+                                    Pilih File
+                                </label>
+
+                                <input
+                                    type="file"
+                                    id="spk"
+                                    name="spk"
+                                    accept=".pdf,.jpg,.jpeg,.png"
+                                    hidden
+                                    required
+                                >
+
+                                <span
+                                    class="file-name"
+                                    id="spk-name"
+                                >
+                                    Belum ada file
+                                </span>
+
+                            </div>
+
+
+                            <div class="document-status pending">
+                                Belum Upload
+                            </div>
+
+                        </div>
+
+
+                        <!-- ================= BUKTI BAYAR ================= -->
+                        <div class="document-item">
+
+                            <div class="document-icon">
+                                PAY
+                            </div>
+
+
+                            <div class="document-info">
+
+                                <h3>
+                                    Bukti Bayar Tanda Jadi
+                                </h3>
+
+                                <p>
+                                    Upload bukti pembayaran tanda jadi.
+                                </p>
+
+
+                                <label
+                                    for="bukti_bayar"
+                                    class="upload-button"
+                                >
+                                    Pilih File
+                                </label>
+
+                                <input
+                                    type="file"
+                                    id="bukti_bayar"
+                                    name="bukti_bayar"
+                                    accept=".pdf,.jpg,.jpeg,.png"
+                                    hidden
+                                    required
+                                >
+
+                                <span
+                                    class="file-name"
+                                    id="bukti-bayar-name"
+                                >
+                                    Belum ada file
+                                </span>
+
+                            </div>
+
+
+                            <div class="document-status pending">
+                                Belum Upload
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ================= VALIDATION ================= -->
+                <section class="validation-box">
+
+                    <div class="validation-icon">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Validasi Dokumen
+                        </strong>
+
+                        <p>
+                            Pastikan seluruh dokumen telah diupload
+                            sebelum mengirim pengajuan.
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ================= BUTTON ================= -->
+                <div class="form-actions">
+
+                    <button
+                        type="reset"
+                        class="btn btn-secondary"
+                    >
+                        Reset
+                    </button>
+
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary"
+                    >
+                        Kirim Pengajuan
+                    </button>
+
+                </div>
+
+            </form>
+
+
+            <!-- ================= FLOW ================= -->
+            <section class="card process-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h2>
+                            Alur Digitalisasi
+                        </h2>
+
+                        <p>
+                            Proses pengajuan setelah digitalisasi.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="process-flow">
+
+                    <div class="process-step">
+
+                        <div class="process-number">
+                            1
+                        </div>
+
+                        <strong>
+                            Konsumen
+                        </strong>
+
+                        <span>
+                            Upload dokumen
+                        </span>
+
+                    </div>
+
+
+                    <div class="process-arrow">
+                        →
+                    </div>
+
+
+                    <div class="process-step">
+
+                        <div class="process-number">
+                            2
+                        </div>
+
+                        <strong>
+                            Sistem
+                        </strong>
+
+                        <span>
+                            Validasi dokumen
+                        </span>
+
+                    </div>
+
+
+                    <div class="process-arrow">
+                        →
+                    </div>
+
+
+                    <div class="process-step">
+
+                        <div class="process-number">
+                            3
+                        </div>
+
+                        <strong>
+                            Marketing
+                        </strong>
+
+                        <span>
+                            Proses pengajuan
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+
+        <div class="container">
+
+            <p>
+                © 2026 Faiz.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>
